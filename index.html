@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta autor="cristianriveraxd">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrato Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Enlace a la fuente Nunito de Google Fonts -->
+  <link rel="icon" type="image/svg" href="https://drive.google.com/thumbnail?id=1IuzAiqX7MPM_nxCXT0Qu3naw2ZW9c28W">
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .navbar {
+      background-color: #4c984e;
+    }
+
+    h2,
+    h3 {
+      font-weight: 700;
+      color: #1d211d
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff;
+    }
+
+    .section-title {
+      margin-top: 50px;
+    }
+
+    .list-library {
+      padding-inline-start: 0;
+      /* Elimina el padding izquierdo */
+      list-style-type: none;
+      /* Elimina los puntos de la lista */
+      margin: 0;
+      /* Asegúrate de que no haya márgenes adicionales */
+    }
+
+    .list-library a {
+      color: #666666;
+      /* Color de texto para los enlaces */
+      text-decoration: none;
+      /* Quita el subrayado de los enlaces */
+      display: flex;
+      /* Hace que el enlace sea un elemento de bloque, útil para alinear texto e íconos */
+      align-items: center;
+      /* Alinea el contenido del enlace verticalmente si hay un ícono */
+      padding: 3px 0;
+      /* Añade espacio alrededor del texto del enlace */
+      transition: color 0.3s ease;
+      /* Efecto de transición al pasar el ratón sobre el enlace */
+    }
+
+    .list-library a i {
+      color: #000000
+    }
+
+    .list-library a:hover {
+      color: #2a882c;
+    }
+
+    .accordion-button {
+      background-color: #f8f9fa;
+    }
+
+
+    .list-problems {
+      list-style: none;
+      padding-top: 0.5px;
+      padding-bottom: 0.5px;
+    }
+
+    .img-problems {
+      width: 100%;
+      /* O el tamaño que desees */
+      max-width: 500px;
+      /* Máximo tamaño */
+      height: auto;
+      /* Mantener la proporción */
+      object-fit: contain;
+      /* Evitar que la imagen se recorte */
+    }
+
+    .sublist {
+      color: #000000;
+    }
+
+    .sublist:hover {
+      color: blue;
+    }
+
+    .additional-section {
+      background-color: #f1f1f1;
+      padding: 50px 0;
+    }
+
+    footer {
+      background-color: #4c984e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    /*  footer a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 0;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    } */
+  </style>
+</head>
+
+<body>
+
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <i class="bi bi-gear px-3" style="color:white;"></i>
+    <a class="navbar-brand fs-4 fs-sm-1" href="#"> Biblioteca Celdas Roboticas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="#documentacion">Biblioteca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="#fallas">Fallas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="#recursos">Recursos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Sección de Biblioteca Digital -->
+  <div class="container section-title" id="biblioteca">
+    <h2 class="text-center mb-4">Biblioteca Digital de Documentación</h2>
+    <p class="text-center mb-4">En nuestra biblioteca digital encontrarás una colección organizada de recursos que te
+      ayudarán a mejorar tu experiencia de aprendizaje y manejo del sistema de palletizado automático. Los documentos
+      están clasificados por niveles de dificultad para que puedas acceder a la
+      información más relevante.</p>
+
+    <div class="row mt-3">
+      <!-- Sección Básico -->
+      <div class="col-md-4">
+        <div class="card border-success">
+          <div class="card-body">
+            <h3 class="card-title text-center">Nivel Básico</h3>
+            <p class="card-text">Ideal para principiantes o quienes necesitan entender lo básico. Incluye guías y
+              tutoriales paso a paso.</p>
+            <ul class="list-library">
+              <a href="" target="_blank">
+                <li> <i class="bi bi-check2-circle"></i> Asignación de líneas</li>
+              </a>
+              <a href="https://docs.google.com/document/d/16sdzuaFPKZJZisAHmubAfYwUd13VTW7IGkkCwiHX30s/edit?tab=t.0#heading=h.30j0zll"
+                target="_blank">
+                <li><i class="bi bi-book-half"></i> Uso de aplicativo Gestión de Mosaicos</li>
+              </a>
+              <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0"
+                target="_blank">
+                <li> <i class="bi bi-book-half"></i> Manual de operación Celdas Roboticas</li>
+              </a>
+              <a href="" target="_blank">
+                <li> <i class="bi bi-rulers"></i> Guía de ajustes</li>
+              </a>
+              <a href="" target="_blank">
+                <li> <i class="bi bi-table"></i> Tabla para balance de líneas</li>
+              </a>
+              <a href="https://drive.google.com/file/d/1mxhZF1JEkiyuZoaTObaIm95AhlWOernu/view?usp=drive_link"
+                target="_blank">
+                <li> <i class="bi bi-book-half"></i> Manual de operación Cenker</li>
+              </a>
+              <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0#heading=h.206ipza"
+                target="_blank">
+                <li><i class="bi bi-code-square"></i> Programas y funcionamiento</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-code-square"></i> Comandos y control</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Intermedio -->
+      <div class="col-md-4">
+        <div class="card border-success">
+          <div class="card-body">
+            <h3 class="card-title text-center">Nivel Intermedio</h3>
+            <p class="card-text">Ideal para quienes ya tienen conocimientos básicos y desean profundizar en el uso de
+              herramientas y procesos más complejos.</p>
+            <ul class="list-library">
+              <a href="" target="_blank">
+                <li><i class="bi bi-plus-lg"></i> Creación de producto nuevo WCS</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-plus-lg"></i> Creación de producto y mosaicos</li>
+              </a>
+              <a href="<?!= rutaWeb + '?p=Alumno' ?>" target="_blank">
+                <li><i class="bi bi-columns-gap"></i> Modificar e independizar</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-steam"></i></i> Operación manual de brazo robótico</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-arrow-right-square-fill"></i> Flujo de banda transportadora PC-PL</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-arrows-move"></i> Procedimiento para desastacar el robot</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-hand-index-thumb"></i> Equipo aplicador de adhesivo</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-bootstrap-reboot"></i> Reinicio de servicios</li>
+              </a>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Avanzado -->
+      <div class="col-md-4">
+        <div class="card border-success">
+          <div class="card-body">
+            <h3 class="card-title text-center">Nivel Avanzado</h3>
+            <p class="card-text">Recursos para procedimientos avanzados, donde es clave entender a fondo el
+              funcionamiento del sistema.</p>
+            <ul class="list-library">
+              <a href="https://drive.google.com/file/d/1EakrI10DZF9TAvXIXGaABkA1_lZRBwuJ/view?usp=drive_link"
+                target="_blank">
+                <li> <i class="bi bi-layout-wtf"></i> Creación de nuevas formas de estibado</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-gear-wide"></i> Ajuste de puntos ceros</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-list-columns-reverse"></i> Modificación de puntos de papel</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-speedometer2"></i> Ajuste de velocidades en tramos de bandas</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-arrow-clockwise"></i> Cambio de salida en controladores</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-diagram-3"></i> Cambio de dirección de nodos Interroll</li>
+              </a>
+              <a href="" target="_blank">
+                <li><i class="bi bi-person-check"></i> Acceso al gestor de Cenker</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Sección de Fallas -->
+  <div class="container section-title" id="fallas">
+    <h2 class="text-center mb-5 pt-5">Fallas y posibles soluciones</h2>
+    <div class="accordion" id="accordionFallas">
+
+      <!-- Tarjetas de fallas -->
+      <!-- Acordón interno-->
+      <!-- Falla1. Brazo robotico no se mueve-->
+      <div class="card border-success">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1" aria-expanded="false" aria-controls="falla1">
+        Error operativo: Brazo robotico no se mueve
+      </button>
+          </h2>
+        </div>
+        <div id="falla1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> Brazo robotico no se mueve, en espera de confirmacion para inicio de secuencia.</p>
+            <ul class="list-problems">
+              <li>1) Verificar en el aplicativo de <i>'Gestión de mosaicos'</i> en sección <i>'Estado robots'</i> en qué
+                estado está el programa</li>
+              <!--Imagen de problema-->
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1BIf-yekDKpY8DV-XLo_-g9ZknEHDnh1n&sz=w1000" alt="Falla 1">
+              </div>
+              <p><b>Listado de estados:</b></p>
+              <!-- Acordeones Internos  -->
+              <!-- Acordeón 1  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingOneOne">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1_1" aria-expanded="false" aria-controls="falla1_1">
+                WAIT SIG (spiston[.rtb])
+              </button>
+                  </h2>
+                </div>
+                <div id="falla1_1" class="collapse" aria-labelledby="headingOneOne" data-parent="#falla1">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Espera confirmación de mesa de rodillos abajo.</p>
+                    <ul>
+                      <li>1. Verificar posición de sensor de mesa de rodillos</li>
+                      <li>2. Asegurarse de que mesa de rodillos bajo completamente</li>
+                      <li>3. Revisar cableado y confirmación de sensor</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Acordeón 2  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingOneTwo">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1_2" aria-expanded="false" aria-controls="falla1_2">
+                WAIT SIG (dedosdetras) ó (dedosdetras)
+              </button>
+                  </h2>
+                </div>
+                <div id="falla1_2" class="collapse" aria-labelledby="headingOneTwo" data-parent="#falla1">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Espera confirmación de dedos en posición trasera o delantera.
+                    </p>
+                    <ul>
+                      <li>1. Verificar finales de carrera</li>
+                      <li>2. Asegurarse de que los finales de carrera esten bien calibrados con el final del recorrido
+                        del actuador</li>
+                      <li>3. Revisar cableado y confirmación de sensor</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Acordeón 3  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingOneTree">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1_3" aria-expanded="false" aria-controls="falla1_2">
+                WAIT locateok[.i]==1
+              </button>
+                  </h2>
+                </div>
+                <div id="falla1_3" class="collapse" aria-labelledby="headingOneTree" data-parent="#falla1">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Espera confirmación de estiba en tramo de rodillos de salida pallet.</p>
+                    <div class="container-fluid py-2">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id=1sQop16vf-jNlUgAUXCLLHsUZg3k7E5vx&sz=w1000" alt="Falla 1">
+                    </div>
+                    <ul>
+                      <li>1. Verificar que el robot haya ejecutado exitosamente el programa de recoger la estiba
+                        <i>'prjpallet'</i> y que este en el ultimo paso de este mismo. Esto lo puede hacer validando
+                        el paso actual en el mando del robot, en el la interfaz de vista de programa.
+                      </li>
+                      <div class="container-fluid py-2">
+                        <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                      </div>
+                      <li>2. Verificar que haya estiba sobre el tramo de rodillos donde el robot este posicionado</li>
+                      <li>3. Si la estiba esta valide el estado del tramo de rodillos, si es necesario rearmelos para
+                        que el sistema confirme la estiba e inicie el palletizado</li>
+                      <li>4. Si no hay estiba posicione una de forma manual y este atento a la confirmación de la
+                        estiba.</li>
+                      <li>5. Si hay estiba y el estado de los motores es el correcto verifique el estado de los
+                        sensores de confirmación de la estiba.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Acordeón 4  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingOneFour">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1_4" aria-expanded="false" aria-controls="falla1_4">
+                WAIT SIG (verarriba) ó (verabajo)
+              </button>
+                  </h2>
+                </div>
+                <div id="falla1_4" class="collapse" aria-labelledby="headingOneFour" data-parent="#falla1">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Espera confirmación de posición palpador.</p>
+                    <ul>
+                      <li>1. Verificar finales de carrera de palpador.</li>
+                      <li>2. Asegurarse de que los finales de carrera esten bien calibrados con el final del recorrido
+                        del actuador.</li>
+                      <li>3. Revisar cableado y confirmación de sensor.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Acordeón 5  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingOneFive">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1_5" aria-expanded="false" aria-controls="falla1_5">
+                TWAIT timersleep
+              </button>
+                  </h2>
+                </div>
+                <div id="falla1_5" class="collapse" aria-labelledby="headingOneFive" data-parent="#falla1">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> En espera de ordenes.</p>
+                    <div class="container-fluid py-2">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id=1l2ZlvV6RHLG36HaIYNwefOoawvr8HFPX&sz=w1000" alt="TWAIT timersleep">
+                    </div>
+                    <ul>
+                      <li>1. Verificar que no se encuentren obstruidos los fardos, cajas o bolsas en la zona de
+                        recepción.
+                      </li>
+                      <li>2. Verificar la confirmación del producto en la zona de recepción (que no se encuentren
+                        activos los rodillos).
+                      </li>
+                      <li>3. Verificar que el robot este sensando y agarrando el papel kraft al momento de recoger sobre
+                        la mesa el papel kraft</li>
+                      <li>4. Verificar el estado de los motores del tramo de rodillos de las salidas de los pallets. Si
+                        el robot no confirma la posición de la estiba despues de haber dejado el producto no iniciara de
+                        nuevo la secuencia</li>
+                      <li>5. Verificar el estado de la variable <i>'targetprogram[x]'</i> para cada línea. Esta variable
+                        es la que se encarga de llevar el control de la construcción del pallet. Tomando los siguientes
+                        estados:
+                        <ul>
+                          <li>targetprogram[x]=0. Estado inicial. No se esta llevando a cabo ninguna acción</li>
+                          <li>targetprogram[x]=1. Orden de recoger estiba e iniciar mosaico</li>
+                          <li>targetprogram[x]=2. Construcción de mosaico</li>
+                          <li>targetprogram[x]=3. Estado de visualización para finalización desde el wcs para un
+                            mosaico.</li>
+                          <li>targetprogram[x]=4. Modo de error. No se obtienen los valores del mosaico correctamente
+                          </li>
+                          <li>targetprogram[x]=5. Finalización de pallet cuando ha terminado</li>
+                          <li>targetprogram[x]=6. Estado de error. No hay papel kraft</li>
+                          <li>targetprogram[x]=7. Estado de error. No hay papel kraft</li>
+                          <li>targetprogram[x]=8. Estado de error. Papel kraft</li>
+                        </ul>.
+                      </li>
+                      <p>Para consultar el estado, debe de hacerlo línea por línea. en la sección 'Estado robots' envie
+                        el comando <i>'print targetprogram[x]'</i> reemplazando x por la línea interna del robot a
+                        consultar, 1, 2 o 3. </p>
+                      <div class="container-fluid py-2">
+                        <img class="img-problems" src="https://drive.google.com/thumbnail?id=1BOCBRI448rvO15t4lEvN8GBNUvtK-C1T&sz=w1000" alt="targetprogram">
+                      </div>
+                      <p>En caso de encontrar un error asociado al papel kraft verifique la confirmación del papel kraft
+                        al momento del robot acercarse a la mesa. Si es un error asociado al mosaico, aborte el producto
+                        programado y verifique su constitución. </p>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <li class="pt-3">2)Verificar si la prioridad de líneas se encuentra activa. Desde el aplicativo de
+                <i>'Gestión de mosaico'</i> en sección <i>'Estado robots'</i> envie el comando <i>'print actprio'</i>
+                para consultar el estado de la prioridad en esa celda
+              </li>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=11Bq7t1bCrgnfKWbFpZe0cK2WDmOci_Hg&sz=w1000" alt="actprio">
+              </div>
+              <p> Si la respuesta es 1 = prioridad activa. Si es 0 = prioridad desactivada</p>
+              <p> En caso de estar activa, desactivela, envie el comando <i>'actprio'</i> igualando la variable a 0.
+              </p>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=16kiya87kBeOqoOtDEOWzI-SvatG2UbiZ&sz=w1000"alt="Insertar Imagen">
+              </div>
+              <li>3) Sincronizar de nuevo la secuencia del robot cargando el programa <i>'runcontrol'</i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla2. No ingresa producto a zona de recepción-->
+      <div class="card border-success">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla2" aria-expanded="false" aria-controls="falla2">
+                            Error operativo: No ingresa producto a zona de recepción
+                        </button>
+          </h2>
+        </div>
+        <div id="falla2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> No se lleva a cabo el conteo de productos, la cortina no se activa, no se ingresan
+              productos a la zona de recepción y no se inicia la secuencia en la entrada específica.</p>
+            <ul class="list-problems">
+              <li>1) Verifique que el programa cargo correctamente, en el aplicativo en sección de
+                <i>'Configuración de líneas'</i>.
+              </li>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rlZEUlEn7xqmCvaqQ9gAb391YDHTpUTW&sz=w1000" alt="Insertar imagen">
+              </div>
+              <li>2) Verifique que no se encuentre ningun sensor obstruido para poder iniciar el conteo de producto.
+              </li>
+              <li>3) Confirme la cantidad de cajas, fardos o bolsas a recoger en la zona de recepción, esto pasando
+                el producto de forma manual a través del sensor hasta cumplir con la cantidad de recogida en esa
+                posición
+                especifica.</li>
+              <li>4) Si ninguna solución descrita anteriormente fue efectiva; aborte la entrada y vuelva a programar el
+                producto.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla3. Bloqueo de robot colocando papel kraft-->
+      <div class="card border-success">
+        <div class="card-header" id="headingTree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla3" aria-expanded="false" aria-controls="falla3">
+                            Error operativo: Bloqueo de robot colocando papel kraft
+                        </button>
+          </h2>
+        </div>
+        <div id="falla3" class="collapse" aria-labelledby="headingTree" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> El robot se detiene y entra en alarma al momento de colocar el papel kraft. Esto
+              sucede porqué esa posición
+              especifica supera los limites envergadura del robot</p>
+            <div class="container-fluid py-2">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+            </div>
+            <ul class="list-problems">
+              <li>1) Encender la pantalla del mando. </li>
+              <li>2) Verificar cual es el paso que presenta el bloqueo "STEP xx"</li>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              </div>
+              </li>
+              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Ejemplo si el error esta en el paso
+                201 <i>'STEP 201'</i>, saltar al siguiente paso 202. Con esto se omite el error en la secuencia y el
+                robot puede continuar con el programa del papel kraft.</li>
+              <li>4) Corregir las capas de papel kraft. En el aplicativo colocar el papel kraft en una capa inferior
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla4. Bloqueo de robot con producto-->
+      <div class="card border-success">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla4" aria-expanded="false" aria-controls="falla4">
+                            Error operativo: Bloqueo de robot en movimiento con producto
+                        </button>
+          </h2>
+        </div>
+        <div id="falla4" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> El robot se detiene y entra en alarma al momento de trasladar el producto a la
+              posición de dejada en el pallet. Esto
+              sucede porqué esa posición
+              especifica supera los limites envergadura del robot; especificamente en exportaciones y productos con
+              demasiado volumen</p>
+            <p>
+              <i>Nota: Los pallets de encartonado exportación USA siempre presenta bloqueo por alturas, seguir el siguiente Procedimiento.</i>
+            </p>
+            <div class="container-fluid py-2">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+            </div>
+            <ul class="list-problems">
+              <li>1) Encender la pantalla del mando. </li>
+              <li>2) Verificar cual es el paso que presenta el bloqueo "STEP xx"</li>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              </div>
+              </li>
+              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Ejemplo si el error esta en el paso
+                201 <i>'STEP 201'</i>, saltar al siguiente paso 202. Con esto se omite el error en la secuencia y el
+                robot puede continuar terminando la secuencia.</li>
+              <li>4) Si es un producto nuevo, verifique las alturas del pallet y si es necesario reduzca capas al
+                mosaico. La exportación USA, encartonado de pasta larga siempre va a presentar esta novedad.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--- Falla5. Bloqueo de línea. Conteo de producto infinito.-->
+      <div class="card border-success">
+        <div class="card-header" id="headingFive">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla5" aria-expanded="false" aria-controls="falla5">
+                            Error operativo: Bloqueo en buffer de entrada. Conteo de producto infinito en zona de recepción. 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla5" class="collapse" aria-labelledby="headingFive" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> En la línea programada, el producto entra de forma continua sin detenerse. El robot
+              no recoge el producto en ningún momento.</p>
+            <div class="container-fluid py-2">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+            </div>
+            <ul class="list-problems">
+              <li>1) </li>
+              <li>2************</li>
+              <li>3************2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla6. Celda bloqueada. No inicializa -->
+      <div class="card border-success">
+        <div class="card-header" id="headingSix">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla6" aria-expanded="false" aria-controls="falla6">
+                            Error operativo: Celda no inicia (no inicia baliza, baliza estatica en rojo continuo o apagada). 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla6" class="collapse" aria-labelledby="headingSix" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> La celda no inicia después de ser detenida. En este caso, la baliza se mantiene en
+              rojo estático o se apaga por completo. Este problema puede ocurrir cuando el robot se inicia, se detiene y
+              luego se intenta iniciar repetidamente. También puede suceder si se intenta iniciar la celda después de
+              haber manipulado manualmente el robot, sin corregir la activación del modo 'repeat' desde el mando o
+              controlador.</p>
+            <p>
+              <i>Nota: Para verificar si este es el problema, observe el estado de la baliza. Si la baliza permanece roja estática y no cambia a rojo intermitente después de haber activado una emergencia, siga el siguiente procedimiento para resolverlo.</i>
+            </p>
+            <div class="container-fluid py-2">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+            </div>
+            <ul class="list-problems">
+              <li>1) Desde el aplicativo de <i>'Gestion de mosaicos'</i> en la sección <i>'Estado de robots'</i> envie
+                el comando <i>'pcexec autostart.pc'</i> a la celda.</li>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rQd8dXrctDFVqxG_j9xkWjJpp9OzSjaY&sz=w1000" alt="Insertar imagen">
+              </div>
+              <li>2) Una vez enviado el comando podra ver como la baliza prende o cambia rojo intermitente. </li>
+              <li>3) Verifique si en el mando aparece algun error; si es asi resetee la alarma e inicie la celda.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla7. No sale pallet terminado-->
+      <div class="card border-success">
+        <div class="card-header" id="headingSeven">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7" aria-expanded="false" aria-controls="falla7">
+                            Error operativo: No sale pallet terminado
+                        </button>
+          </h2>
+        </div>
+        <div id="falla7" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> El robot termino de construir el pallet pero avanza hacia la salida.</p>
+            <p><b>Posibles causas:</b></p>
+            <!-- Acordeones Internos  -->
+            <!-- Acordeón 1  -->
+            <div class="card mt-3">
+              <div class="card-header" id="headingSevenOne">
+                <h2 class="mb-0 sublist">
+                  <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7_1" aria-expanded="false" aria-controls="falla7_1">
+                Motor bloqueado
+              </button>
+                </h2>
+              </div>
+              <div id="falla7_1" class="collapse" aria-labelledby="headingSevenOne" data-parent="#falla7">
+                <div class="card-body">
+                  <p><b>Descripción:</b> El pallet no sale porque el motor encargado de sacar el pallet está en falla.
+                  </p>
+                  <ul>
+                    <li>1. Verifique en el WCS el estado de los motores de la línea. Si el motor esta en alarma,
+                      aparecerán en color rojo</li>
+                    <div class="container-fluid py-2">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                    </div>
+                    <li>2. Si este es el caso, confirme que la estiba pueda salir libremente por el tramo de rodillos y
+                      luego proceda a rearmar los motores</li>
+                    <li>3. Para rearmar el tramo de rodillos, reinicie los tableros de control ubicados en la parte
+                      externa de la celda. Apague simultáneamente el seccionador de ambos tableros, espere 5 segundos y
+                      luego vuelva a encenderlos. La banda principal se detendrá y tomará unos momentos para reiniciar
+                      el proceso completamente</li>
+                    <div class="container-fluid py-2">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                    </div>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Acordeón 2  -->
+            <div class="card mt-3">
+              <div class="card-header" id="headingSevenTwo">
+                <h2 class="mb-0 sublist">
+                  <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7_2" aria-expanded="false" aria-controls="falla7_2">
+                Sensor de salida pallet desalineado
+              </button>
+                </h2>
+              </div>
+              <div id="falla7_2" class="collapse" aria-labelledby="headingSevenTwo" data-parent="#falla7">
+                <div class="card-body">
+                  <p><b>Descripción:</b> El sensor que confirma la presencia de un pallet en la salida de la línea esta
+                    desalineado o obstruido, esto hace que el sistema 'detecte' como si hubiera un pallet en la salida y
+                    por eso no da la orden al pallet terminado para salir..</p>
+                  <ul>
+                    <li>1. Verifique que los sensores del suelo estén libres y no estén generando señales falsas.
+                      Asegúre de que el sensor que confirma la presencia del pallet (el que está en diagonal) esté
+                      alineado con el reflejo. Este sensor tiene dos LEDs: uno verde, que indica que está enviando el
+                      haz de luz, y uno naranja, que muestra que está recibiendo el retorno. Si solo está encendido el
+                      LED verde, significa que el sensor está enviando la señal pero no recibe el retorno, lo cual
+                      podría indicar que está detectando un pallet de manera errónea. Lo ideal es que ambos LEDs (verde
+                      y naranja) estén encendidos. Esto también puede verificarse desde el WCS. </li>
+                    <div class="container-fluid py-2">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                    </div>
+                    <li>2. Si este es el caso, alinee los sensores para decirle al sistema que la salida esta libre y
+                      puede evacuar el pallet pendiente.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Acordeón 3 -->
+            <div class="card mt-3">
+              <div class="card-header" id="headingSevenTwo">
+                <h2 class="mb-0 sublist">
+                  <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7_2" aria-expanded="false" aria-controls="falla7_2">
+                Estiba obstruida
+              </button>
+                </h2>
+              </div>
+              <div id="falla7_2" class="collapse" aria-labelledby="headingSevenTwo" data-parent="#falla7">
+                <div class="card-body">
+                  <p><b>Descripción:</b> La estiba se encuentra bloqueda con alguna guarda o con algun taco.</p>
+                  <ul>
+                    <li>1. Verifique que la estiba pueda desplazarse libremente y que no esté obstruida en ninguna parte
+                      del tramo de rodillos. Si hay alguna obstrucción, intente liberar la estiba para permitir la
+                      salida del pallet, liberada la estiba, realice el
+                      reinicio de los motores para así poder continuar con el movimiento del pallet en esa línea. </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla 8. Línea no finaliza -->
+      <div class="card border-success">
+        <div class="card-header" id="headingEight">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla8" aria-expanded="false" aria-controls="falla8">
+                            Error operativo: No finaliza la línea. 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla8" class="collapse" aria-labelledby="headingEight" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> La línea de producción ha finalizado, pero la estiba no sale.</p>
+            <p>
+            <ul class="list-problems">
+              <li>1) Asegúrese de que la entrada esté libre de productos y que los sensores no estén obstruidos (ningún
+                sensor bloqueado)</li>
+              <li>2) Verifique que el freno cuenta paquetes esté en su posición correcta</li>
+              <li>3) Confirme que ninguno de los motores esté en alarma</li>
+              <li>
+                <i>Nota: Es importante verificar estos puntos, ya que el sistema, al finalizar, reinicia todos los flags y pone a cero los contadores. Si algún sensor está obstruido o el freno está activado por error, el sistema puede interpretar que hay producto en la entrada, lo que impide que la línea finalice correctamente.</i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla 9. Línea no aborta -->
+      <div class="card border-success">
+        <div class="card-header" id="headingNine">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla9" aria-expanded="false" aria-controls="falla9">
+                            Error operativo: No aborta la línea. 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla9" class="collapse" aria-labelledby="headingNine" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> La línea de producción no aborta o no cambia de estado despues de abortar.</p>
+            <p>
+            <ul class="list-problems">
+              <li>1)</li>
+              <li>2************</li>
+              <li>3************2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla10.-->
+      <div class="card border-success">
+        <div class="card-header" id="headingTen">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla10" aria-expanded="false" aria-controls="falla10">
+                            Error operativo: Rodillos de salida pallet giran sin tener estiba.Robot no inicia producción en esa línea. 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla10" class="collapse" aria-labelledby="headingTen" data-parent="#accordionFallas">
+          <div class="card-body">
+            <ul>
+              <li>1************</li>
+              <li>2************</li>
+              <li>3************2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla11.-->
+      <div class="card border-success">
+        <div class="card-header" id="headingEleven">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla11" aria-expanded="false" aria-controls="falla11">
+                            Error operativo: Estibas no avanzan al robot siguiente. 
+                        </button>
+          </h2>
+        </div>
+        <div id="falla11" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionFallas">
+          <div class="card-body">
+            <ul>
+              <li>1************</li>
+              <li>2************</li>
+              <li>3************2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Recursos Adicionales -->
+  <div class="container-fluid additional-section mt-5" id="recursos">
+    <div class="container">
+      <h2 class="text-center">Recursos Adicionales</h2>
+
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h4>XXXXX</h4>
+          <a href="https://developers.google.com/apps-script/guides" target="_blank">link1</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>XXXXX</h4>
+          <a href="https://www.youtube.com/" target="_blank">link 2</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <h4>XXXXX</h4>
+          <a href="https://stackoverflow.com/questions/tagged/google-apps-script" target="_blank">link3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Biblioteca Digital de Documentación.</p>
+  </footer>
+
+
+  <!-- Scripts propios-->
+  <script>
+    function actualizarDiv(html, button) {
+        var div = document.getElementById('resultado');
+        div.innerHTML = html;
+      }
+  </script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
