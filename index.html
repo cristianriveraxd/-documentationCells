@@ -25,16 +25,17 @@
       flex-direction: column;
       min-height: 100vh;
       font-family: 'Nunito', sans-serif;
+      background-color: #f9f9f9;
     }
 
     .navbar {
-      background-color: #4c984e;
+      background-color: #0043ca;
     }
 
     h2,
     h3 {
       font-weight: 700;
-      color: #1d211d
+      color: #1d211d;
     }
 
     .navbar-brand,
@@ -75,7 +76,19 @@
     }
 
     .list-library a:hover {
-      color: #2a882c;
+      color: #0055ff;
+    }
+
+    h2.mb-0 .btn-link {
+      color: #424242;
+    }
+
+    h2.mb-0 .btn-link i {
+      color: #000000;
+    }
+
+    h2.mb-0 .btn-link:hover {
+      color: #0055ff;
     }
 
     .accordion-button {
@@ -114,7 +127,7 @@
     }
 
     footer {
-      background-color: #4c984e;
+      background-color: #0043ca;
       color: white;
       text-align: center;
       padding: 20px;
@@ -145,7 +158,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" id="link-nav" href="#documentacion">Biblioteca</a>
+          <a class="nav-link" id="link-nav" href="">Biblioteca</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="link-nav" href="#fallas">Fallas</a>
@@ -156,7 +169,6 @@
       </ul>
     </div>
   </nav>
-
 
   <!-- Sección de Biblioteca Digital -->
   <div class="container section-title" id="biblioteca">
@@ -169,8 +181,8 @@
     <div class="row mt-3">
       <!-- Sección Básico -->
       <div class="col-md-4">
-        <div class="card border-success">
-          <div class="card-body">
+        <div class="card" style="border: 2px solid #0043ca">
+          <div class="card-body" style="padding: 1rem;">
             <h3 class="card-title text-center">Nivel Básico</h3>
             <p class="card-text">Ideal para principiantes o quienes necesitan entender lo básico. Incluye guías y
               tutoriales paso a paso.</p>
@@ -210,26 +222,30 @@
 
       <!-- Sección Intermedio -->
       <div class="col-md-4">
-        <div class="card border-success">
-          <div class="card-body">
+        <div class="card" style="border: 2px solid #0043ca">
+          <div class="card-body" style="padding: 1rem;">
             <h3 class="card-title text-center">Nivel Intermedio</h3>
             <p class="card-text">Ideal para quienes ya tienen conocimientos básicos y desean profundizar en el uso de
               herramientas y procesos más complejos.</p>
             <ul class="list-library">
-              <a href="" target="_blank">
+              <a href="https://docs.google.com/document/d/16sdzuaFPKZJZisAHmubAfYwUd13VTW7IGkkCwiHX30s/edit?tab=t.0#heading=h.1ci93xb"
+                target="_blank">
                 <li><i class="bi bi-plus-lg"></i> Creación de producto nuevo WCS</li>
               </a>
-              <a href="" target="_blank">
+              <a href="https://docs.google.com/document/d/16sdzuaFPKZJZisAHmubAfYwUd13VTW7IGkkCwiHX30s/edit?tab=t.0#heading=h.1ci93xb"
+                target="_blank">
                 <li><i class="bi bi-plus-lg"></i> Creación de producto y mosaicos</li>
               </a>
-              <a href="<?!= rutaWeb + '?p=Alumno' ?>" target="_blank">
+              <a href="https://script.google.com/a/macros/alimentosdoria.com/s/AKfycbyIMR-xlGa-SRPJHrNFKzAEYao7Z1TCNrtUzsHv0Q/exec?qw=independizar"
+                target="_blank">
                 <li><i class="bi bi-columns-gap"></i> Modificar e independizar</li>
               </a>
-              <a href="" target="_blank">
+              <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0#heading=h.147n2zr"
+                target="_blank">
                 <li><i class="bi bi-steam"></i></i> Operación manual de brazo robótico</li>
               </a>
               <a href="" target="_blank">
-                <li><i class="bi bi-arrow-right-square-fill"></i> Flujo de banda transportadora PC-PL</li>
+                <li><i class="bi bi-arrow-right-square-fill"></i> Tablero banda transportadora PC-PL</li>
               </a>
               <a href="" target="_blank">
                 <li><i class="bi bi-arrows-move"></i> Procedimiento para desastacar el robot</li>
@@ -237,7 +253,8 @@
               <a href="" target="_blank">
                 <li><i class="bi bi-hand-index-thumb"></i> Equipo aplicador de adhesivo</li>
               </a>
-              <a href="" target="_blank">
+              <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0#heading=h.sqyw64"
+                target="_blank">
                 <li><i class="bi bi-bootstrap-reboot"></i> Reinicio de servicios</li>
               </a>
             </ul>
@@ -248,8 +265,8 @@
 
       <!-- Sección Avanzado -->
       <div class="col-md-4">
-        <div class="card border-success">
-          <div class="card-body">
+        <div class="card" style="border: 2px solid #0043ca">
+          <div class="card-body" style="padding: 1rem;">
             <h3 class="card-title text-center">Nivel Avanzado</h3>
             <p class="card-text">Recursos para procedimientos avanzados, donde es clave entender a fondo el
               funcionamiento del sistema.</p>
@@ -258,7 +275,8 @@
                 target="_blank">
                 <li> <i class="bi bi-layout-wtf"></i> Creación de nuevas formas de estibado</li>
               </a>
-              <a href="" target="_blank">
+              <a href="https://docs.google.com/document/d/1acH8spvDbd2h0SF4aW4XIstjZUx1nfBuuZgfGyIeCOQ/edit?tab=t.0"
+                target="_blank">
                 <li><i class="bi bi-gear-wide"></i> Ajuste de puntos ceros</li>
               </a>
               <a href="" target="_blank">
@@ -271,10 +289,10 @@
                 <li><i class="bi bi-arrow-clockwise"></i> Cambio de salida en controladores</li>
               </a>
               <a href="" target="_blank">
-                <li><i class="bi bi-diagram-3"></i> Cambio de dirección de nodos Interroll</li>
+                <li><i class="bi bi-diagram-3"></i> Redireccionamiento de nodos Interroll</li>
               </a>
               <a href="" target="_blank">
-                <li><i class="bi bi-person-check"></i> Acceso al gestor de Cenker</li>
+                <li><i class="bi bi-person-check"></i> Gestor de Cenker</li>
               </a>
             </ul>
           </div>
@@ -282,8 +300,6 @@
       </div>
     </div>
   </div>
-
-
 
   <!-- Sección de Fallas -->
   <div class="container section-title" id="fallas">
@@ -293,11 +309,11 @@
       <!-- Tarjetas de fallas -->
       <!-- Acordón interno-->
       <!-- Falla1. Brazo robotico no se mueve-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingOne">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1" aria-expanded="false" aria-controls="falla1">
-        Error operativo: Brazo robotico no se mueve
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla1" aria-expanded="false" aria-controls="falla1" role="button">
+        <i class="bi bi-caret-down-square"></i> Error operativo: Brazo robotico no se mueve
       </button>
           </h2>
         </div>
@@ -309,7 +325,7 @@
                 estado está el programa</li>
               <!--Imagen de problema-->
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1BIf-yekDKpY8DV-XLo_-g9ZknEHDnh1n&sz=w1000" alt="Falla 1">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1W4UqoXuobJM6RjW4er8IrcD2huVHX0X6&sz=w1000" alt="Falla 1">
               </div>
               <p><b>Listado de estados:</b></p>
               <!-- Acordeones Internos  -->
@@ -432,12 +448,35 @@
                       <li>2. Verificar la confirmación del producto en la zona de recepción (que no se encuentren
                         activos los rodillos).
                       </li>
-                      <li>3. Verificar que el robot este sensando y agarrando el papel kraft al momento de recoger sobre
+                      <li>3. Verificar que el robot este sensando y tomando el papel kraft al momento de recoger sobre
                         la mesa el papel kraft</li>
                       <li>4. Verificar el estado de los motores del tramo de rodillos de las salidas de los pallets. Si
                         el robot no confirma la posición de la estiba despues de haber dejado el producto no iniciara de
                         nuevo la secuencia</li>
-                      <li>5. Verificar el estado de la variable <i>'targetprogram[x]'</i> para cada línea. Esta variable
+                      <li>5. Verificar el estado de las líneas. Es importante que las líneas se encuentren en
+                        <i>'WaitProgramDone'</i> si se encuentra algun estado distinto validar la causa.
+                        <br>
+                        <p><b>Listado de estados de línea:</b></p>
+                        <ul>
+                          <li><b>PreInitial:</b> Resetea variables de la linea para inicializar todo</li>
+                          <li><b>Initial:</b> Ordena al robot abortar el programa en curso de esa linea y espera a que
+                            este listo para trabajar</li>
+                          <li><b>FlushOutputOnInit:</b> Expulsa los pallets en curso</li>
+                          <li><b>WaitActiveConfiguration:</b> Espera que se cargue una configuracion valida para la
+                            linea</li>
+                          <li><b>SendProgram:</b> Envia el programa al Robot </li>
+                          <li><b>WaitProgramDone:</b> El pallet se esta procesando, se espera a que el Robot termine de
+                            procesarlo</li>
+                          <li><b>OutputPallet:</b> Saca el pallet terminado</li>
+                          <li><b>WaitRobotReset:</b> Se espera a que el Robot resetee los flags de proceso para
+                            continuar </li>
+                          <li><b>WaitStartConfiguration:</b>Se espera recibir una nueva configuracion a procesar</li>
+                          <li><b>WaitRobotEnd:</b>Se espera a que el Robot termine de procesar la ultima orden </li>
+                          <li><b>WaitProgramAck:</b>Se espera a que el Robot acepte el prograsma enviado</li>
+                          <li><b>PrgLoadFail:</b>Falla al cargar el programa en el robot</li>
+                        </ul>
+                        <br>
+                      <li>6. Verificar el estado de la variable <i>'targetprogram[x]'</i> para cada línea. Esta variable
                         es la que se encarga de llevar el control de la construcción del pallet. Tomando los siguientes
                         estados:
                         <ul>
@@ -488,17 +527,17 @@
       </div>
 
       <!-- Falla2. No ingresa producto a zona de recepción-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla2" aria-expanded="false" aria-controls="falla2">
-                            Error operativo: No ingresa producto a zona de recepción
+                            <i class="bi bi-caret-down-square"></i> Error operativo: No ingresa producto a zona de recepción
                         </button>
           </h2>
         </div>
         <div id="falla2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFallas">
           <div class="card-body">
-            <p><b>Descripción:</b> No se lleva a cabo el conteo de productos, la cortina no se activa, no se ingresan
+            <p><b>Descripción:</b> No se lleva a cabo el conteo de productos, la cortina no se activa, no ingresan
               productos a la zona de recepción y no se inicia la secuencia en la entrada específica.</p>
             <ul class="list-problems">
               <li>1) Verifique que el programa cargo correctamente, en el aplicativo en sección de
@@ -522,11 +561,11 @@
       </div>
 
       <!-- Falla3. Bloqueo de robot colocando papel kraft-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingTree">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla3" aria-expanded="false" aria-controls="falla3">
-                            Error operativo: Bloqueo de robot colocando papel kraft
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Bloqueo de robot colocando papel kraft
                         </button>
           </h2>
         </div>
@@ -556,11 +595,11 @@
       </div>
 
       <!-- Falla4. Bloqueo de robot con producto-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingFour">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla4" aria-expanded="false" aria-controls="falla4">
-                            Error operativo: Bloqueo de robot en movimiento con producto
+                            <i class="bi bi-caret-down-square"></i> Error operativo: Bloqueo de robot en movimiento con producto
                         </button>
           </h2>
         </div>
@@ -596,11 +635,11 @@
       </div>
 
       <!--- Falla5. Bloqueo de línea. Conteo de producto infinito.-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingFive">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla5" aria-expanded="false" aria-controls="falla5">
-                            Error operativo: Bloqueo en buffer de entrada. Conteo de producto infinito en zona de recepción. 
+                          <i class="bi bi-caret-down-square"></i>   Error operativo: Bloqueo en buffer de entrada. Conteo de producto infinito en zona de recepción 
                         </button>
           </h2>
         </div>
@@ -621,11 +660,11 @@
       </div>
 
       <!-- Falla6. Celda bloqueada. No inicializa -->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingSix">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla6" aria-expanded="false" aria-controls="falla6">
-                            Error operativo: Celda no inicia (no inicia baliza, baliza estatica en rojo continuo o apagada). 
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Celda no inicia (no inicia baliza, baliza estatica en rojo continuo o apagada)
                         </button>
           </h2>
         </div>
@@ -656,11 +695,11 @@
       </div>
 
       <!-- Falla7. No sale pallet terminado-->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingSeven">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7" aria-expanded="false" aria-controls="falla7">
-                            Error operativo: No sale pallet terminado
+                            <i class="bi bi-caret-down-square"></i>  Error operativo: No sale pallet terminado
                         </button>
           </h2>
         </div>
@@ -759,20 +798,21 @@
       </div>
 
       <!-- Falla 8. Línea no finaliza -->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingEight">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla8" aria-expanded="false" aria-controls="falla8">
-                            Error operativo: No finaliza la línea. 
+                            <i class="bi bi-caret-down-square"></i>  Error operativo: No finaliza la línea
                         </button>
           </h2>
         </div>
         <div id="falla8" class="collapse" aria-labelledby="headingEight" data-parent="#accordionFallas">
           <div class="card-body">
-            <p><b>Descripción:</b> La línea de producción ha finalizado, pero la estiba no sale.</p>
+            <p><b>Descripción:</b> Se ha finalizado la línea desde el WCS pero el sistema no finaliza.</p>
             <p>
             <ul class="list-problems">
-              <li>1) Asegúrese de que la entrada esté libre de productos y que los sensores no estén obstruidos (ningún
+              <li>1) Asegúrese de que la entrada esté libre de producto y que los sensores no estén obstruidos ni
+                desenfocados (ningún
                 sensor bloqueado)</li>
               <li>2) Verifique que el freno cuenta paquetes esté en su posición correcta</li>
               <li>3) Confirme que ninguno de los motores esté en alarma</li>
@@ -785,39 +825,85 @@
       </div>
 
       <!-- Falla 9. Línea no aborta -->
-      <div class="card border-success">
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingNine">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla9" aria-expanded="false" aria-controls="falla9">
-                            Error operativo: No aborta la línea. 
+                            <i class="bi bi-caret-down-square"></i>  Error operativo: No aborta la línea
                         </button>
           </h2>
         </div>
         <div id="falla9" class="collapse" aria-labelledby="headingNine" data-parent="#accordionFallas">
           <div class="card-body">
-            <p><b>Descripción:</b> La línea de producción no aborta o no cambia de estado despues de abortar.</p>
+            <p><b>Descripción:</b> Se ha abortado la línea desde el WCS pero el sistema no aborta la línea.</p>
             <p>
             <ul class="list-problems">
-              <li>1)</li>
-              <li>2************</li>
-              <li>3************2</li>
+              <li>1) Verifique que el motor del tramo de la salida de rodillos no se encuentre en alarma y adicional que
+                los sensores que confirman la posición de salida de la estiba se libres y enfocados.</li>
+              <li>2) Consulte el estado de la variable <i>targetprogram</i> con el comando
+                <i>'print targetprogram[x]'</i> reemplazando x por la entrada interna del robot donde presenta la
+                novedad. Si la variable arroja de estado 1 y no hay estiba sobre la entrada iguale la variable a 0 para
+                indicarle al sistema que la entrada esta libre, pero si por el contrario tiene una estiba y no quiere
+                dar la orden de salida iguale la variable a 2 para indicar que la estiba esta lista, con esto el sistema
+                se sincroniza y aborta la salida. Adicional cargue el programa <i>'runcontrol'</i> en el mando para
+                sincronizar la secuencia del sistema
+              </li>
+              <li>3) Si la solución anterior no funciona reinicie los controladores y los motores con la ayuda en un
+                electricista para
+                iniciar de nuevo los programas de sincronización del robot</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- Falla10.-->
-      <div class="card border-success">
+      <!-- Falla10. Rodillos de salida pallet giran sin tener estiba-->
+      <div class="card" style="border: 2px solid #0043ca">
         <div class="card-header" id="headingTen">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla10" aria-expanded="false" aria-controls="falla10">
-                            Error operativo: Rodillos de salida pallet giran sin tener estiba.Robot no inicia producción en esa línea. 
+                            <i class="bi bi-caret-down-square"></i>  Error operativo: Rodillos de salida pallet giran sin tener estiba.Robot no inicia producción en esa línea
                         </button>
           </h2>
         </div>
         <div id="falla10" class="collapse" aria-labelledby="headingTen" data-parent="#accordionFallas">
           <div class="card-body">
-            <ul>
+            <p><b>Descripción:</b> El pallet fue completado correctamente, salio y fue retirado por los estibadores,
+              pero los rodillos de salida quedaron activados, lo que impide que el robot inicie nuevamente la
+              construcción del pallet en esa entrada.</p>
+            <div class="container-fluid py-2">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+            </div>
+            <p>
+            <ul class="list-problems">
+              <li>Verifiqué que los sensores de confirmación de la posición de la estiba, donde el robot inicia la
+                construcción del pallet, estén correctamente alineados y sin obstrucciones. Esta novedad ocurre porque
+                el sistema detecta como si la estiba estubiera en la zona inicial, lo que provoca que los rodillos se
+                activen para evacuarla.
+              </li>
+              <p>
+                <i>Nota: Si necesita alinear los sensores active la parada de emergencia de la botonera para detener los motores y poder trabajar en un ambiente seguro.</i>
+              </p>
+              <div class="container-fluid py-2">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla11. Estibas no avanzan al robot siguientes-->
+      <div class="card" style="border: 2px solid #0043ca">
+        <div class="card-header" id="headingEleven">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla11" aria-expanded="false" aria-controls="falla11">
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Estibas no avanzan al robot siguiente
+                        </button>
+          </h2>
+        </div>
+        <div id="falla11" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> El robot se queda sin estibas</p>
+            <ul class="list-problems">
               <li>1************</li>
               <li>2************</li>
               <li>3************2</li>
@@ -826,21 +912,28 @@
         </div>
       </div>
 
-      <!-- Falla11.-->
-      <div class="card border-success">
-        <div class="card-header" id="headingEleven">
+      <!-- Falla12. Mosaico no cambia-->
+      <div class="card" style="border: 2px solid #0043ca">
+        <div class="card-header" id="headingTwelve">
           <h2 class="mb-0">
-            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla11" aria-expanded="false" aria-controls="falla11">
-                            Error operativo: Estibas no avanzan al robot siguiente. 
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla12" aria-expanded="false" aria-controls="falla12">
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Mosaico no cambio al realizar un cambio de formato
                         </button>
           </h2>
         </div>
-        <div id="falla11" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionFallas">
+        <div id="falla12" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionFallas">
           <div class="card-body">
-            <ul>
-              <li>1************</li>
-              <li>2************</li>
-              <li>3************2</li>
+            <p><b>Descripción:</b> Las coordenadas del pallet que se había finalizado previamente se mantienen guardadas
+              y se utilizan en el pallet actualmente programado, sin que se realice un cambio de mosaico. Esto ocurre
+              cuando se efectúa un cambio de formato en las entradas del sistema mientras al mismo tiempo se está
+              ajustando un mosaico en el mismo robot. El problema se debe a una concurrencia de datos, lo que impide que
+              el sistema actualice las coordenadas debido a que la comunicación está bloqueada mientras se realiza el
+              ajuste del mosaico. Para resolver este inconveniente, siga los siguientes pasos:</p>
+            <ul class="list-problems">
+              <li>1) Aborte la línea que presenta la novedad.</li>
+              <li>2) Espere a que termine de ajustarse el mosaico en el robot.</li>
+              <li>3) Una vez que se haya cargado la información correctamente al sistema, programe nuevamente el
+                producto.</li>
             </ul>
           </div>
         </div>
