@@ -113,6 +113,17 @@
       /* Evitar que la imagen se recorte */
     }
 
+    .img-problems-papel {
+      width: 100%;
+      /* O el tamaño que desees */
+      max-width: 400px;
+      /* Máximo tamaño */
+      height: auto;
+      /* Mantener la proporción */
+      object-fit: contain;
+      /* Evitar que la imagen se recorte */
+    }
+
     .sublist {
       color: #000000;
     }
@@ -126,7 +137,12 @@
       padding: 50px 0;
     }
 
+    .e-stop {
+      color: red;
+    }
+
     footer {
+      margin-top: 50px;
       background-color: #0043ca;
       color: white;
       text-align: center;
@@ -198,10 +214,12 @@
                 target="_blank">
                 <li> <i class="bi bi-book-half"></i> Manual de operación Celdas Roboticas</li>
               </a>
+              <!--
               <a href="" target="_blank">
                 <li> <i class="bi bi-rulers"></i> Guía de ajustes</li>
-              </a>
-              <a href="" target="_blank">
+              </a> 
+              -->
+              <a href="https://drive.google.com/file/d/10C5N8wEX6QLxnM5I3QgZYmPTJUfMDslw/view" target="_blank">
                 <li> <i class="bi bi-table"></i> Tabla para balance de líneas</li>
               </a>
               <a href="https://drive.google.com/file/d/1mxhZF1JEkiyuZoaTObaIm95AhlWOernu/view?usp=drive_link"
@@ -211,9 +229,6 @@
               <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0#heading=h.206ipza"
                 target="_blank">
                 <li><i class="bi bi-code-square"></i> Programas y funcionamiento</li>
-              </a>
-              <a href="" target="_blank">
-                <li><i class="bi bi-code-square"></i> Comandos y control</li>
               </a>
             </ul>
           </div>
@@ -244,15 +259,18 @@
                 target="_blank">
                 <li><i class="bi bi-steam"></i></i> Operación manual de brazo robótico</li>
               </a>
-              <a href="" target="_blank">
-                <li><i class="bi bi-arrow-right-square-fill"></i> Tablero banda transportadora PC-PL</li>
+              <a href="https://script.google.com/a/macros/alimentosdoria.com/s/AKfycbyIMR-xlGa-SRPJHrNFKzAEYao7Z1TCNrtUzsHv0Q/exec?qw=comandos"
+                target="_blank">
+                <li><i class="bi bi-code-square"></i> Comandos y variables</li>
               </a>
+              <!--
               <a href="" target="_blank">
                 <li><i class="bi bi-arrows-move"></i> Procedimiento para desastacar el robot</li>
               </a>
               <a href="" target="_blank">
                 <li><i class="bi bi-hand-index-thumb"></i> Equipo aplicador de adhesivo</li>
               </a>
+              -->
               <a href="https://docs.google.com/document/d/1cLdPqOW6gYGmZOcclYxQUvI0cN6nwn35XsfEh2auO6M/edit?tab=t.0#heading=h.sqyw64"
                 target="_blank">
                 <li><i class="bi bi-bootstrap-reboot"></i> Reinicio de servicios</li>
@@ -279,11 +297,12 @@
                 target="_blank">
                 <li><i class="bi bi-gear-wide"></i> Ajuste de puntos ceros</li>
               </a>
+              <!--
               <a href="" target="_blank">
                 <li><i class="bi bi-list-columns-reverse"></i> Modificación de puntos de papel</li>
-              </a>
-              <a href="" target="_blank">
-                <li><i class="bi bi-speedometer2"></i> Ajuste de velocidades en tramos de bandas</li>
+              </a>-->
+              <a href="" target="_blank" class="lh-base">
+                <li><i class="bi bi-speedometer2"></i> Ajuste de velocidades en tramos de rodillos</li>
               </a>
               <a href="" target="_blank">
                 <li><i class="bi bi-arrow-clockwise"></i> Cambio de salida en controladores</li>
@@ -291,9 +310,11 @@
               <a href="" target="_blank">
                 <li><i class="bi bi-diagram-3"></i> Redireccionamiento de nodos Interroll</li>
               </a>
+              <!--
               <a href="" target="_blank">
                 <li><i class="bi bi-person-check"></i> Gestor de Cenker</li>
               </a>
+              -->
             </ul>
           </div>
         </div>
@@ -392,7 +413,7 @@
                         el paso actual en el mando del robot, en el la interfaz de vista de programa.
                       </li>
                       <div class="container-fluid py-2">
-                        <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                        <img class="img-problems" src="https://drive.google.com/thumbnail?id=1UVjGiCq2N3Wy3ZiW4boXI5A2flpdXTJq&sz=w1000" alt="PRJPALLET">
                       </div>
                       <li>2. Verificar que haya estiba sobre el tramo de rodillos donde el robot este posicionado</li>
                       <li>3. Si la estiba esta valide el estado del tramo de rodillos, si es necesario rearmelos para
@@ -518,7 +539,7 @@
               <p> En caso de estar activa, desactivela, envie el comando <i>'actprio'</i> igualando la variable a 0.
               </p>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id=16kiya87kBeOqoOtDEOWzI-SvatG2UbiZ&sz=w1000"alt="Insertar Imagen">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=16kiya87kBeOqoOtDEOWzI-SvatG2UbiZ&sz=w1000"alt="actprio=0">
               </div>
               <li>3) Sincronizar de nuevo la secuencia del robot cargando el programa <i>'runcontrol'</i></li>
             </ul>
@@ -544,7 +565,7 @@
                 <i>'Configuración de líneas'</i>.
               </li>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rlZEUlEn7xqmCvaqQ9gAb391YDHTpUTW&sz=w1000" alt="Insertar imagen">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rlZEUlEn7xqmCvaqQ9gAb391YDHTpUTW&sz=w1000" alt="Configuración de líneas">
               </div>
               <li>2) Verifique que no se encuentre ningun sensor obstruido para poder iniciar el conteo de producto.
               </li>
@@ -575,18 +596,23 @@
               sucede porqué esa posición
               especifica supera los limites envergadura del robot</p>
             <div class="container-fluid py-2">
-              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id=1aqFm3KNEKqO-YfpugVl2Qf3C_0N4d8Zo&sz=w1000" alt="Insertar imagen">
             </div>
             <ul class="list-problems">
               <li>1) Encender la pantalla del mando. </li>
               <li>2) Verificar cual es el paso que presenta el bloqueo "STEP xx"</li>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                <img class="img-problems-papel" src="https://drive.google.com/thumbnail?id=1aqFm3KNEKqO-YfpugVl2Qf3C_0N4d8Zo&sz=w1000" alt="Error papel kraft">
               </div>
               </li>
-              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Ejemplo si el error esta en el paso
-                201 <i>'STEP 201'</i>, saltar al siguiente paso 202. Con esto se omite el error en la secuencia y el
-                robot puede continuar con el programa del papel kraft.</li>
+              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Como en este ejemplo si el error esta
+                en el paso
+                94 <i>'STEP 94'</i>, saltar al siguiente paso 95. Con esto se omite el paso del error en la secuencia y el
+                robot puede continuar con el programa del papel kraft.
+                <div class="container-fluid py-2">
+                  <img class="img-problems-papel" src="https://drive.google.com/thumbnail?id=1rvGdBF2oO2OGzEtqNWQD-scCx-Bd9VPL&sz=w1000" alt="Solución papel kraft">
+                </div>
+              </li>
               <li>4) Corregir las capas de papel kraft. En el aplicativo colocar el papel kraft en una capa inferior
               </li>
             </ul>
@@ -614,21 +640,28 @@
               <i>Nota: Los pallets de encartonado exportación USA siempre presenta bloqueo por alturas, seguir el siguiente Procedimiento.</i>
             </p>
             <div class="container-fluid py-2">
-              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id=16hYbzG4cjtrLOkYuxqxuukhua_eoJGXN&sz=w1000" alt="Bloqueo por alturas con producto">
             </div>
             <ul class="list-problems">
               <li>1) Encender la pantalla del mando. </li>
               <li>2) Verificar cual es el paso que presenta el bloqueo "STEP xx"</li>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1SOwaIy5bEuiugKHRbijTI1oEs8f9pXSe&sz=w1000" alt="Verificación de paso de bloqueo">
               </div>
               </li>
-              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Ejemplo si el error esta en el paso
-                201 <i>'STEP 201'</i>, saltar al siguiente paso 202. Con esto se omite el error en la secuencia y el
-                robot puede continuar terminando la secuencia.</li>
-              <li>4) Si es un producto nuevo, verifique las alturas del pallet y si es necesario reduzca capas al
-                mosaico. La exportación USA, encartonado de pasta larga siempre va a presentar esta novedad.
+              <li>3) Resetear la alarma <i>'Reset'</i> y saltar el paso del error. Como en la imagen el error esta en el
+                paso
+                201 <i>'STEP 201'</i>, saltar al siguiente paso 202. Con esto se salta el error en la secuencia y el
+                robot puede continuar. <div class="container-fluid py-2">
+                  <img class="img-problems" src="https://drive.google.com/thumbnail?id=1KxRMbv6L38K4HGnmQLP1ZoygH--GRnnV&sz=w1000" alt="Saltar paso de bloqueo">
+                </div>
               </li>
+              <li>4) Si es un producto nuevo, verifique las alturas del pallet y si es necesario reduzca capas al
+                mosaico.
+              </li>
+              <p class="pt-3">
+                <i>Nota:  La exportación USA, encartonado de pasta larga siempre va a presentar esta novedad.</i>
+              </p>
             </ul>
           </div>
         </div>
@@ -639,21 +672,22 @@
         <div class="card-header" id="headingFive">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla5" aria-expanded="false" aria-controls="falla5">
-                          <i class="bi bi-caret-down-square"></i>   Error operativo: Bloqueo en buffer de entrada. Conteo de producto infinito en zona de recepción 
+                          <i class="bi bi-caret-down-square"></i>   Error operativo: Bloqueo en buffer de entrada. Sistema no termina conteo de producto en zona de recepción 
                         </button>
           </h2>
         </div>
         <div id="falla5" class="collapse" aria-labelledby="headingFive" data-parent="#accordionFallas">
           <div class="card-body">
-            <p><b>Descripción:</b> En la línea programada, el producto entra de forma continua sin detenerse. El robot
-              no recoge el producto en ningún momento.</p>
+            <p><b>Descripción:</b> En la línea programada, el producto entra de forma continua a la zona de recepción sin detenerse. El robot
+              no recoge el producto en ningún momento y la entrada se satura. Verificar el estado de la entrada en el aplicativo de gestión de mosaicos, como se muestra en la siguiente imagen: </p>
             <div class="container-fluid py-2">
-              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id=1y10i0476KIK3T3GqBpM3AHcNC1TDzANy&sz=w1000" alt="Bloqueo por alturas con producto">
             </div>
+            <p>Si el estado de la entrada es <i>'BoxInBufferError'</i>:</p>
             <ul class="list-problems">
-              <li>1) </li>
-              <li>2************</li>
-              <li>3************2</li>
+              <li>1) Abortar la entrada desde el WCS y retirar todo el producto que haya ingresado a la línea </li>
+              <li>2) Dejar la entrada libre y programar de nuevo la entrada con algún producto de otra referencia distinta y que no este en produccion en ese momento. Una vez programado debemos esperar a que el sistema haga un reset en la entrada y libere el buffer</li>
+              <li>3) Verificar que el error no persista en el aplicativo antes de volver a programar el producto, si el error continua repetir el procedimiento </li>
             </ul>
           </div>
         </div>
@@ -679,13 +713,13 @@
               <i>Nota: Para verificar si este es el problema, observe el estado de la baliza. Si la baliza permanece roja estática y no cambia a rojo intermitente después de haber activado una emergencia, siga el siguiente procedimiento para resolverlo.</i>
             </p>
             <div class="container-fluid py-2">
-              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+              <img class="img-problems" src="https://drive.google.com/thumbnail?id=1ROPFBLbPisR7SYH-SIjEQbYT-H7TUEu7&sz=w1000" alt="Baliza">
             </div>
             <ul class="list-problems">
               <li>1) Desde el aplicativo de <i>'Gestion de mosaicos'</i> en la sección <i>'Estado de robots'</i> envie
                 el comando <i>'pcexec autostart.pc'</i> a la celda.</li>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rQd8dXrctDFVqxG_j9xkWjJpp9OzSjaY&sz=w1000" alt="Insertar imagen">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=1rQd8dXrctDFVqxG_j9xkWjJpp9OzSjaY&sz=w1000" alt="Comando pcexec autostart.pc">
               </div>
               <li>2) Una vez enviado el comando podra ver como la baliza prende o cambia rojo intermitente. </li>
               <li>3) Verifique si en el mando aparece algun error; si es asi resetee la alarma e inicie la celda.</li>
@@ -725,18 +759,15 @@
                     <li>1. Verifique en el WCS el estado de los motores de la línea. Si el motor esta en alarma,
                       aparecerán en color rojo</li>
                     <div class="container-fluid py-2">
-                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                      <img class="img-problems" src="https://drive.google.com/thumbnail?id=1m0E4Y3Z4YF9cYxbTa_63JUFpHoCvP9ow&sz=w1000" alt="Motores en falla">
                     </div>
                     <li>2. Si este es el caso, confirme que la estiba pueda salir libremente por el tramo de rodillos y
                       luego proceda a rearmar los motores</li>
                     <li>3. Para rearmar el tramo de rodillos, reinicie los tableros de control ubicados en la parte
                       externa de la celda. Apague simultáneamente el seccionador de ambos tableros, espere 5 segundos y
-                      luego vuelva a encenderlos. La banda principal se detendrá y tomará unos momentos para reiniciar
+                      luego vuelva a encenderlos. Solicite apoyo de un electricista si es necesario. Al apagar los
+                      tableos la banda principal se detendrá y tomará unos momentos para reiniciar
                       el proceso completamente</li>
-                    <div class="container-fluid py-2">
-                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
-                    </div>
-
                   </ul>
                 </div>
               </div>
@@ -763,9 +794,6 @@
                       LED verde, significa que el sensor está enviando la señal pero no recibe el retorno, lo cual
                       podría indicar que está detectando un pallet de manera errónea. Lo ideal es que ambos LEDs (verde
                       y naranja) estén encendidos. Esto también puede verificarse desde el WCS. </li>
-                    <div class="container-fluid py-2">
-                      <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
-                    </div>
                     <li>2. Si este es el caso, alinee los sensores para decirle al sistema que la salida esta libre y
                       puede evacuar el pallet pendiente.</li>
                   </ul>
@@ -776,12 +804,12 @@
             <div class="card mt-3">
               <div class="card-header" id="headingSevenTwo">
                 <h2 class="mb-0 sublist">
-                  <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7_2" aria-expanded="false" aria-controls="falla7_2">
+                  <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla7_3" aria-expanded="false" aria-controls="falla7_3">
                 Estiba obstruida
               </button>
                 </h2>
               </div>
-              <div id="falla7_2" class="collapse" aria-labelledby="headingSevenTwo" data-parent="#falla7">
+              <div id="falla7_3" class="collapse" aria-labelledby="headingSevenTwo" data-parent="#falla7">
                 <div class="card-body">
                   <p><b>Descripción:</b> La estiba se encuentra bloqueda con alguna guarda o con algun taco.</p>
                   <ul>
@@ -861,7 +889,7 @@
         <div class="card-header" id="headingTen">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla10" aria-expanded="false" aria-controls="falla10">
-                            <i class="bi bi-caret-down-square"></i>  Error operativo: Rodillos de salida pallet giran sin tener estiba.Robot no inicia producción en esa línea
+                            <i class="bi bi-caret-down-square"></i>  Error operativo: Rodillos de salida pallet giran sin tener estiba. Robot no inicia producción en esa línea
                         </button>
           </h2>
         </div>
@@ -870,21 +898,22 @@
             <p><b>Descripción:</b> El pallet fue completado correctamente, salio y fue retirado por los estibadores,
               pero los rodillos de salida quedaron activados, lo que impide que el robot inicie nuevamente la
               construcción del pallet en esa entrada.</p>
-            <div class="container-fluid py-2">
-              <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
-            </div>
             <p>
             <ul class="list-problems">
               <li>Verifiqué que los sensores de confirmación de la posición de la estiba, donde el robot inicia la
                 construcción del pallet, estén correctamente alineados y sin obstrucciones. Esta novedad ocurre porque
-                el sistema detecta como si la estiba estubiera en la zona inicial, lo que provoca que los rodillos se
+                el sistema detecta como si la estiba estubiera aún en la zona inicial, lo que provoca que los rodillos
+                se
                 activen para evacuarla.
+                <div class="container-fluid py-2">
+                  <img class="img-problems" src="https://drive.google.com/thumbnail?id=1awSiyev3E5NjB8PaJKvbyU56DehUnyaF&sz=w1000" alt="Sensores desenfocados">
+                </div>
               </li>
-              <p>
+              <p class="pt-3">
                 <i>Nota: Si necesita alinear los sensores active la parada de emergencia de la botonera para detener los motores y poder trabajar en un ambiente seguro.</i>
               </p>
               <div class="container-fluid py-2">
-                <img class="img-problems" src="https://drive.google.com/thumbnail?id==w1000" alt="Insertar imagen">
+                <img class="img-problems" src="https://drive.google.com/thumbnail?id=18HEBY2D0fifisvS0-M_W8tK6Mjr5fzGD&sz=w1000" alt="Parada de emergencia botonera">
               </div>
             </ul>
           </div>
@@ -896,19 +925,53 @@
         <div class="card-header" id="headingEleven">
           <h2 class="mb-0">
             <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla11" aria-expanded="false" aria-controls="falla11">
-                           <i class="bi bi-caret-down-square"></i>  Error operativo: Estibas no avanzan al robot siguiente
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Robot sin estibas
                         </button>
           </h2>
         </div>
         <div id="falla11" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionFallas">
           <div class="card-body">
-            <p><b>Descripción:</b> El robot se queda sin estibas</p>
+            <strong>Robot se queda sin estibas</strong>
+
             <ul class="list-problems">
-              <li>1************</li>
-              <li>2************</li>
-              <li>3************2</li>
+              <li>1) Verifique que el dispensador tenga estibas y que esté encendido. Si el dispensador
+                tiene estibas pero no inicia, retire las estibas, oprima el botón de paro de emergencia y vuelva a
+                insertar las estibas con el paro de emergencia activado. Esto reiniciará el sistema y pondrá en marcha
+                el dispensador.</li>
+              <li>2) Si el dispensador tiene estibas, asegúrese de que puedan pasar libremente, sin
+                obstrucciones en el trayecto de los rodillos, y que las estibas estén en condiciones óptimas.</li>
+              <li>3) Si lo anterior está correcto, verifique que no haya obstrucciones en los sensores
+                que permiten el paso de la estiba. Los sensores están ubicados en el tramo de paso de la estiba y en la
+                parte vertical del dispensador.</li>
+              <li>4) Verifique que los motores no presenten fallas. Puede hacerlo desde el WCS en la
+                zona de los tramos de rodillos. Si un rodillo está fallando, su indicador tomará color rojo. En este
+                caso, reinicie los motores con la asistencia de un electricista. <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=18ucALHDcWIo4tERCyidhaoadn0XpnoyG&sz=w1000" alt="Motores tramo de rodillos tranps estibas en falla">
+                </div>
+              </li>
+            </ul>
+            <strong class="py-2">Estibas no avanzan al robot siguiente</strong>
+
+            <ul class="list-problems">
+              <li>1) Verifique que los motores no estén en falla. Esto se puede comprobar desde el WCS
+                en los tramos de rodillos. Si algún rodillo falla, se indicará con un color rojo. En este caso, reinicie
+                los motores con el apoyo de un electricista.</li>
+              <li>2) Asegúrese de que no haya sensores obstruidos por material como papel kraft o
+                fragmentos de estibas.</li>
+              <li>3) Verifique que los sensores estén correctamente alineados.</li>
+              <li>4) Si todo está en orden y la estiba no avanza, desocupe el dispensador de estibas y
+                pase la estiba manualmente al robot siguiente (con el dispensador vacío). Espere a que todo el sistema
+                de transporte de estibas se desocupe completamente, asegurándose de que no quede ninguna estiba en el
+                sistema. Una vez que el sistema esté vacío, espere a que el robot evacue un pallet y luego cargue las
+                estibas nuevamente en el dispensador. Esto sincronizará los flags de estibas del sistema. Dado que el
+                robot no detecta la presencia de la estiba, si el sistema transfiere una estiba del robot 1 al 2
+                o del robot 4 al 3, el sistema considerará que la estiba ya ha sido transferida así la estiba no este en
+                su posición. Cuando el robot
+                solicite la estiba y el todo el tramo de estibas esté libre, se reiniciará la secuencia y todos los
+                flags de confirmación
+                volverán a cero, pasando asi las estibas al siguiente robot.</li>
             </ul>
           </div>
+
         </div>
       </div>
 
@@ -938,26 +1001,199 @@
           </div>
         </div>
       </div>
+
+      <!-- Falla13. Bandas detenidas-->
+      <div class="card" style="border: 2px solid #0043ca">
+        <div class="card-header" id="headingThirteen">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla13" aria-expanded="false" aria-controls="falla13">
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Bandas detenidas
+                        </button>
+          </h2>
+        </div>
+        <div id="falla13" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> Bandas transportadoras detenidas, seleccione la zona</p>
+
+
+            <ul class="list-problems">
+              <!-- Acordeón 1  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingThirteenOne">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla13_1" aria-expanded="false" aria-controls="falla13_1">
+                Bandas de pasta larga
+              </button>
+                  </h2>
+                </div>
+                <div id="falla13_1" class="collapse" aria-labelledby="headingThirteenOne" data-parent="#falla13">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Paro total o parcial de la banda transportadora principal</p>
+                    <ul>
+                      <li>1. Para garantizar el funcionamiento adecuado y la clasificación en las celdas robóticas, las
+                        bandas intentan mantener una distancia (GAP) entre producto y producto. Si un producto no cumple
+                        con las especificaciones, las bandas comienzan a detenerse en secuencia para mantener el GAP
+                        necesario. Si esto no se cumple, la banda transportadora se detendrá completamente. Si este es
+                        el caso, verifique si la recirculación de producto está correctamente ajustada desde el tablero
+                        de control de la banda principal y verifique que todas las entradas se encuentran operativas.
+                      </li>
+                      <li>2. Revise que los sensores no estén obstruidos y que estén correctamente alineados a lo largo
+                        del trayecto de las bandas transportadoras de los robots y desviadores. No olvide verificar
+                        también la banda de descarte, que debe estar libre de productos para que las bandas
+                        transportadoras de pasta larga puedan arrancar correctamente.</li>
+                      <li>3. Revise el estado de los de las guayas de seguridad, si se encuentran en 0, estan activadas,
+                        rearme el contacto para poder arrancar (mueva perilla a 1). <div class="container-fluid py-2">
+                          <img class="img-problems" src="https://drive.google.com/thumbnail?id=1qNuM6RIhOBloiA63q_ySQgEFAevMYced&sz=w1000" alt="Guaya de seguridads">
+                        </div>
+                      </li>
+                      <li>4. Si los sensores están en buen estado pero las bandas no arrancan, solicite apoyo de un
+                        electricista y verifique la comunicación del PLC (Controlador Lógico Programable).</li>
+                      <li>5. Si la comunicación con el PLC es correcta, verifique las direcciones de los nodos y revise
+                        si alguno de ellos presenta fallos. Para ello, consulte el siguiente tutorial: <a
+                          href="#">INSERTAR TUTORIAL</a>.</li>
+                      <li>6. Asegúrese de que la banda esté configurada en modo automático desde el tablero de control
+                        de las bandas. <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1bwxEskp3gWh1s-GflxSoXjbjDB5-wh-x&sz=w1000" alt="Bandas en automatico">
+                        </div>
+                      </li>
+                      <li>7. Si la falla persiste, consulte con el electricista para localizar y solucionar el problema.
+                        Mientras se resuelve, puede activar el bypass de las bandas para permitir el arranque de las
+                        bandas transportadoras hasta el chequeador de peso. Sin embargo, este procedimiento no activará
+                        las bandas de los robots. Esto permitirá recibir el producto y estibarlo manualmente mientras
+                        se encuentra una solución al problema. Para esto dirigase a PL7 y podra ver el acceso al
+                        selector del bypass <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1c7nrOjLZHrjdm1-Jht4SpKmOykCvjmFA&sz=w1000" alt="bypass">
+                        </div>
+                        Para poder activar el bypass digite la contraseña <i>'4'</i> y podra activar el bypass, tenga en
+                        cuenta que esto es solo para poder estibar el producto de forma manual.
+                        <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1JnLHlKKx7FGn1nkyDL143XC-IvoBgpcu&sz=w1000" alt="Bypass Acess">
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Acordeón 2  -->
+              <div class="card mt-3">
+                <div class="card-header" id="headingThirteenTwo">
+                  <h2 class="mb-0 sublist">
+                    <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla13_2" aria-expanded="false" aria-controls="falla13_2">
+                Bandas de pasta corta
+              </button>
+                  </h2>
+                </div>
+                <div id="falla13_2" class="collapse" aria-labelledby="headingThirteenTwo" data-parent="#falla13">
+                  <div class="card-body">
+                    <p><b>Descripción:</b> Paro total o parcial de la banda transportadora principal</p>
+                    <ul>
+                      <li>1. Para garantizar el funcionamiento adecuado y la clasificación en las celdas robóticas, las
+                        bandas intentan mantener una distancia (GAP) entre producto y producto. Si un producto no cumple
+                        con las especificaciones, las bandas comienzan a detenerse en secuencia para mantener el GAP
+                        necesario. La ventaja es que el equipo cero presión de pasta corta garantiza esto. Si las bandas
+                        se detienen en su totalidad.
+                      </li>
+                      <li>2. Revise que los sensores no estén obstruidos y que estén correctamente alineados a lo largo
+                        del trayecto de las bandas transportadoras de los robots y desviadores.</li>
+                      <li>3. Revise el estado de los de las guayas de seguridad, si se encuentran en 0, estan activadas,
+                        rearme el contacto para poder arrancar (mueva perilla a 1) <div class="container-fluid py-2">
+                          <img class="img-problems" src="https://drive.google.com/thumbnail?id=1qNuM6RIhOBloiA63q_ySQgEFAevMYced&sz=w1000" alt="Guayas de seguridad">
+                        </div>
+                      </li>
+                      <li>4. Si los sensores están en buen estado pero las bandas no arrancan, solicite apoyo de un
+                        electricista y verifique la comunicación del PLC (Controlador Lógico Programable).</li>
+                      <li>4. Si la comunicación con el PLC es correcta, verifique las direcciones de los nodos y revise
+                        si alguno de ellos presenta fallos. Para ello, consulte el siguiente tutorial: <a
+                          href="#">INSERTAR TUTORIAL</a>.</li>
+                      <li>5. Asegúrese de que la banda esté configurada en modo automático desde el tablero de control
+                        de las bandas. <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1bwxEskp3gWh1s-GflxSoXjbjDB5-wh-x&szlig;=w1000" alt="Modo automatico">
+                        </div>
+                      </li>
+                      <li>7. Si la falla persiste, consulte con el electricista para localizar y solucionar el problema.
+                        Mientras se resuelve, puede activar el bypass de las bandas para permitir el arranque de las
+                        bandas transportadoras. Sin embargo, este procedimiento no activará
+                        las bandas de los robots. Esto permitirá recibir el producto y estibarlo manualmente mientras
+                        se encuentra una solución al problema. Para esto dirigase a PPL y podra ver el acceso al
+                        selector del bypass <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1LbgVgWEs2JVwNTXTd-CETJlJ-SqsiI2N" alt="bypass">
+                        </div>
+                        Para poder activar el bypass digite la contraseña <i>'4'</i> y podra activar el bypass, tenga en
+                        cuenta que esto es solo para poder estibar el producto de forma manual.
+                        <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=1Co9NgNk6duoIJip1Ww1SuHi_VByUJmCS&sz=w1000" alt="Bypass Acess">
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="py-3">
+                <i>Nota: Si la falla afecta a ambos sistemas (pasta larga y pasta corta), es decir, si ambas bandas se detienen al mismo tiempo, primero valide la comunicación con el servidor. Puede hacerlo consultando el estado de las líneas desde el aplicativo. Si no obtiene respuesta y se presenta un error relacionado con la IP consultada, verifique el estado del servidor. <br>
+En caso de que el servidor esté fuera de servicio o se haya desenergizado, detenga la operación de las celdas <strong>de forma inmediata</strong> esto por razones de seguridad. Si algún robot quedó en proceso de recolección de producto o en una zona donde su movimiento libre pueda causar daños, proceda a posicionarlo manualmente en un lugar seguro y cargue el programa runontrol. <br>
+
+Una vez que el servidor se reinicie, el sistema realizará un reinicio completo, evacuando los pallets y reanudando la secuencia conforme se vayan retirando los pallets evacuados. Solo se debe retirar el producto que permanezca en la zona de recepción y ya las bandas se podran arrancar.</i>
+
+              </p>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Falla14. Robot no arranca-->
+      <div class="card" style="border: 2px solid #0043ca">
+        <div class="card-header" id="headingFourteen">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed accordion-button" type="button" data-toggle="collapse" data-target="#falla14" aria-expanded="false" aria-controls="falla14">
+                           <i class="bi bi-caret-down-square"></i>  Error operativo: Celda no inicia (baliza rojo intermitente)
+                        </button>
+          </h2>
+        </div>
+        <div id="falla14" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordionFallas">
+          <div class="card-body">
+            <p><b>Descripción:</b> La celda no inicia después de ser detenida. En este caso, la baliza se mantiene en
+              rojo intermitente. </p>
+            <ul class="list-problems">
+              <li>1) Verificar el estado de la cerradura de la puerta, debe de estar bien cerrada.</li>
+              <li>2) Validar que no haya ninguna alarma en el mando, si es el caso validar que alarma es, resetear la
+                alarma y corregir la causa.</li>
+              <li>3) Revisar que no este ninguna parada de emergencia activa en la celda, la celda cuenta
+                con 5 paradas de emergencia.
+                <ul>
+                  <li>Parada de emergencia de cerradura</li>
+                  <li>Parada de emergencia de botonera</li>
+                  <li>Parada de emergencia de mando (teach pendant)</li>
+                  <li>Parada de emergencia de controladores</li>
+                  <li>Parada de emergencia de guayas</li>
+                </ul>
+                En la interfaz del mando, si alguna parada de emergencia está activa, se mostrará el
+                mensaje<i class="e-stop">'E-STOP'</i>
+                <div class="container-fluid py-2"><img class="img-problems" src="https://drive.google.com/thumbnail?id=10izcnYGuLKE8NvmYr5p-zvrnQfNW85oe&sz=w1000" alt="Indicador parada de emergencia interna">
+                </div>
+                <p>Si alguna de las paradas de emergencia está activada, verifica cada una de las 5 emergencias para
+                  poder reiniciar el robot correctamente.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Sección de Recursos Adicionales -->
   <div class="container-fluid additional-section mt-5" id="recursos">
     <div class="container">
-      <h2 class="text-center">Recursos Adicionales</h2>
+      <h2 class="text-center pb-1">Recursos Adicionales</h2>
 
       <div class="row">
         <div class="col-md-4 text-center">
-          <h4>XXXXX</h4>
-          <a href="https://developers.google.com/apps-script/guides" target="_blank">link1</a>
+          <h4>Estandares de operación</h4>
+          <a href="https://drive.google.com/drive/folders/1i7OxKGe4hPLsEetM6zQLioJcbdRz1v3G?usp=drive_link" target="_blank">Mecanicó Sistema automático</a>
         </div>
         <div class="col-md-4 text-center">
-          <h4>XXXXX</h4>
-          <a href="https://www.youtube.com/" target="_blank">link 2</a>
+          <h4>Fichas técnicas empaque </h4>
+          <a href="https://lookerstudio.google.com/reporting/cd7f9f4a-08db-4281-bc5e-0936cc1e5a2a" target="_blank">Data studio</a>
         </div>
         <div class="col-md-4 text-center">
-          <h4>XXXXX</h4>
-          <a href="https://stackoverflow.com/questions/tagged/google-apps-script" target="_blank">link3</a>
+          <h4>Manuales celdas robóticas</h4>
+          <a href="https://drive.google.com/drive/folders/1AV7fp5dhH5l6D53pMGVi6x0DmuBGe1vr?usp=drive_link" target="_blank">Carpeta manuales</a>
         </div>
       </div>
     </div>
@@ -966,17 +1202,10 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Biblioteca Digital de Documentación.</p>
+    <p>&copy; 2025 Biblioteca Digital de Documentación.</p>
   </footer>
 
 
-  <!-- Scripts propios-->
-  <script>
-    function actualizarDiv(html, button) {
-        var div = document.getElementById('resultado');
-        div.innerHTML = html;
-      }
-  </script>
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
