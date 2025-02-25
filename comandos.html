@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta autor="cristianriveraxd">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrato Icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- Enlace a la fuente Nunito de Google Fonts -->
+  <link rel="icon" type="image/svg" href="https://drive.google.com/thumbnail?id=1IuzAiqX7MPM_nxCXT0Qu3naw2ZW9c28W">
+</head>
+
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f9f9f9;
+  }
+
+  .navbar {
+    background-color: #0043ca;
+  }
+
+  h2,
+  h3 {
+    font-weight: 700;
+    color: #1d211d;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    color: #fff;
+  }
+
+  .section-title {
+    margin-top: 50px;
+  }
+
+  .img-estado {
+    width: 100%;
+    /* O el tamaño que desees */
+    max-width: 600px;
+    /* Máximo tamaño */
+    height: auto;
+    /* Mantener la proporción */
+    object-fit: contain;
+    /* Evitar que la imagen se recorte */
+  }
+
+  footer {
+    bottom: 0;
+    background-color: #0043ca;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+</style>
+
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <i class="bi bi-gear px-3" style="color:white;"></i>
+    <a class="navbar-brand fs-4 fs-sm-1" href="#"> Biblioteca Celdas Roboticas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="">Biblioteca</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="#comandos">Comandos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="link-nav" href="#tabla">Tabla de comandos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section content -->
+  <div class="container section-title" id="comandos">
+    <h2 class="text-center mb-4"> Comandos, variables y funciones</h2>
+    <p class="text-center mb-4">Los comandos nos permiten interactuar con el sistema a través de órdenes enviadas desde
+      una terminal que se ejecuta en el aplicativo 'Gestion de Mosaicos'. Para comenzar, podemos acceder a la sección
+      "Estado de robots", donde podremos consultar el estado actual del sistema. Además, desde esta zona es posible
+      enviar comandos directamente al robot seleccionado para interactuar con él de
+      manera más específica.
+      <br>
+      <img class="img-estado py-3" src="https://drive.google.com/thumbnail?id=1W4UqoXuobJM6RjW4er8IrcD2huVHX0X6&sz=w1000" alt="Envio comando">
+      <br>
+  </div>
+
+  <!-- table-->
+  <div class="container section-title" id="tabla">
+    <h2 class="text-center mb-4"> Tabla de comandos</h2>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Comando</th>
+          <th scope="col">Función</th>
+          <th scope="col">Cuando usarlo</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <!--Row 1 prgid-->
+        <tr>
+          <th scope="row">1</th>
+          <td>print prgid[X]</td>
+          <td>Visualiza el numero del mosaico programado en la linea interna del robot 'x'. Reemplazar x por la línea
+            interna a consultar</td>
+          <td>Los mosaicos son por defecto la misma línea. Solo cambia el lado
+            del robot, adicionando 1000 para los lados derechos del sistema. Por ejemplo si la línea 3 es el lado
+            derecho el mosaico de la línea seria el 1003, pero si la
+            línea es el lado izquierdo el valor de la línea seria el 3</td>
+        </tr>
+        <!--Row 2 prgdone-->
+        <tr>
+          <th scope="row">2</th>
+          <td>print prgdone[X]</td>
+          <td>Visualiza el estado de la línea interna del robot 'x'. Reemplazar x por la línea interna a consultar. Si
+            El resultado es: 1 Linea Bloqueada y 0 Linea Desbloqueada</td>
+          <td>Este comando se aplica cuando el Estado de la Linea se encuentra en "Wait Robot Reset" y no cambia de
+            estado</td>
+        </tr>
+        <!--Row 3 prgdone[X]=0-->
+        <tr>
+          <th scope="row">3</th>
+          <td>prgdone[X]=0 </td>
+          <td>Desbloquea la línea interna del robot seleccionado</td>
+          <td>Este comando se aplica si al consultar con print prgdone[X] el resultado es 1. Al aplicar este comando
+            libera la entrada y el sistema resetea los flags internos de la entrada para iniciar de nuevo la operación
+          </td>
+        </tr>
+        <!--Row 4 timehoralan-->
+        <tr>
+          <th scope="row">4</th>
+          <td>print timehoralan[idmosaico]</td>
+          <td>Visualiza el valor del temporizador de empuje cuando recoge el producto identificado con el id mosaico
+          </td>
+          <td>Este comando se aplica cuando queremos conocer el tiempo de empuje que aplica el robot al momento de
+            recoger el producto en la zona de recepción</td>
+        </tr>
+        <!--Row 5 timehoratras-->
+        <tr>
+          <th scope="row">5</th>
+          <td>print timehoratras[idmosaico] </td>
+          <td>Visualiza el valor del temporizador de empuje cuando deja el producto identificado con el id mosaico</td>
+          <td>Este comando se aplica cuando queremos conocer el tiempo de empuje que aplica el robot al momento de dejar
+            el producto sobre el pallet</td>
+        </tr>
+        <!--Row 6 speeddejada-->
+        <tr>
+          <th scope="row">6</th>
+          <td>print speeddejada </td>
+          <td>Visualiza la velocidad del movimiento de dejada del papel cuando lo deja sobre la estiba o pallet</td>
+          <td>Este comando es util para conocer la velocidad con la que el robot realiza este movimiento especifico de
+            dejar el papel kraft. Aunque es una velocidad estandar, para este movimiento es de 50 </td>
+        </tr>
+        <!--Row 7 speeddejada-->
+        <tr>
+          <th scope="row">7</th>
+          <td>speeddejada=velocidad </td>
+          <td>Modifica la velocidad del movimiento de dejada del papel cuando lo deja sobre la estiba o pallet.
+            reemplazando velocidad por la velocidad deseada entre 0 a 100</td>
+          <td>Este comando se aplica para modificar la velocidad con la que el robot realiza este movimiento especifico
+            de dejar el papel kraft <strong>La velocidad estandar para este movimiento es de 50</strong></td>
+        </tr>
+        <!--Row 8 pcexec autostart.pc-->
+        <tr>
+          <th scope="row">8</th>
+          <td>pcexec autostart.pc </td>
+          <td>Reinicia la programacion del robot. No borra la programacion, al contrario conrinua la produccion donde
+            quedo.</td>
+          <td>Este comando se aplica cuando una celda no inicia después de ser detenida. En este caso, la baliza se
+            mantiene en rojo estático o se apaga por completo. Este problema puede ocurrir cuando el robot se inicia, se
+            detiene y luego se intenta iniciar repetidamente. También puede suceder si se intenta iniciar la celda
+            después de haber manipulado manualmente el robot, sin corregir la activación del modo 'repeat' desde el
+            mando o controlador</td>
+        </tr>
+        <!--Row 9 targetprogram-->
+        <tr>
+          <th scope="row">9</th>
+          <td>print targetprogram[X]</td>
+          <td>Visualiza el estado de la variable targetprogram de la linea interna del robot 'x'. Reemplazar x por la
+            línea interna a consultar. Esta variable es la que se encarga de llevar el control de la construcción del
+            pallet.</td>
+          <td>Este comando se aplica cuando deseamos conocer el estado de la línea de algun robot. Esto nos es util para
+            indentificar en que estado esta la línea y como podemos proceder. Las respuestas pueden ser:
+            <ul>
+              <li> 0) Estado inicial. No se esta llevando a cabo ninguna acción</li>
+              <li> 1) Orden de recoger estiba e iniciar mosaico</li>
+              <li> 2) En construcción de mosaico</li>
+              <li> 3) Estado de visualización para finalización desde el wcs para un mosaico.</li>
+              <li> 4) Modo de error. No se obtienen los valores del mosaico programado correctamente</li>
+              <li> 5) Finalización de pallet cuando ha terminado</li>
+              <li> 6) Estado de error. No hay papel kraft</li>
+              <li> 7) Estado de error. No hay papel kraft</li>
+              <li> 8) Estado de error. Papel kraft</li>
+            </ul>
+          </td>
+        </tr>
+        <!--Row 10 targetprogram-->
+        <tr>
+          <th scope="row">10</th>
+          <td>targetprogram[X]= 0</td>
+          <td>Este comando libera la entrada 'x' interna del sistema. Al igualar la variable a 0 le decimos al sistema
+            que la entrada se encuentra disponible</td>
+          <td>Este comando se aplica cuando el Estado de la Linea dice "Wait Robot end" o "Send program".
+            <strong> Es importante aplicar este comando unicamente en estos casos, ya que al modificar la variable de control del pallet podemos afectar la secuencia del sistema </strong>
+          </td>
+        </tr>
+        <!--Row 11 hightvel-->
+        <tr>
+          <th scope="row">11</th>
+          <td>print hightvel</td>
+          <td>Visualiza la velocidad con la que el robot realiza el movimiento para posicionarse a recoger la estiba o
+            el papel</td>
+          <td>Este comando es util para conocer la velocidad con la que el robot realiza este movimiento especifico.
+            Aunque es una velocidad estandar, para este movimiento es de 100
+            <strong>Reducir esta velocidad puede afectar la eficiencia del sistema</strong>
+          </td>
+        </tr>
+        <!--Row 12 medumvel-->
+        <tr>
+          <th scope="row">12</th>
+          <td>print medumvel</td>
+          <td>Visualiza la velocidad con la que el robot realiza el movimiento de trasladación de la estiba y papel</td>
+          <td>Este comando es util para conocer la velocidad con la que el robot realiza este movimiento especifico.
+            Aunque es una velocidad estandar, para este movimiento es de 70.
+            <strong>Aumentar esta velocidad puede ser riesgoso por la trasladación de la estiba de un punto a otro. No aumentar</strong>
+          </td>
+        </tr>
+        <!--Row 13 slowvel-->
+        <tr>
+          <th scope="row">13</th>
+          <td>print slowvel</td>
+          <td>Visualiza la velocidad con la que el robot realiza el movimiento de recoger la estiba y de confirmar el
+            papel</td>
+          <td>Este comando es util para conocer la velocidad con la que el robot realiza este movimiento especifico.
+            Aunque es una velocidad estandar, para este movimiento es de 55.
+            <strong>Aumentar esta velocidad puede ser riesgoso por el posicionamiento del robot al momento de recoger la estiba</strong>
+          </td>
+        </tr>
+        <!--Row 14 print speedbox-->
+        <tr>
+          <th scope="row">14</th>
+          <td>print speedbox</td>
+          <td>Visualiza la velocidad con la que el robot realiza el movimiento de trasladar el producto de la zona de
+            recepción a la dejada sobre la estiba</td>
+          <td>Este comando es util para conocer la velocidad con la que el robot realiza este movimiento especifico.
+            Aunque es una velocidad estandar, para este movimiento es de 100. Con algunas excepciones como los
+            encartonados, donde por seguridad es necesario reducir esta velocidad
+          </td>
+        </tr>
+        <!--Row 15 speedbox-->
+        <tr>
+          <th scope="row">15</th>
+          <td>speedbox = X</td>
+          <td>Modifica la velocidad con la que el robot realiza el movimiento de trasladar el producto de la zona de
+            recepción a la dejada sobre la estiba. Reemplazando X por nuestra velocidad deseada.</td>
+          <td>Este comando es util para reducir la velocidad de este movimiento cuando trabajamos encartonado o
+            presentamos alguna novedad con el agarre del producto o la conformación de fardos
+          </td>
+        </tr>
+        <!--Row 16 actprio-->
+        <tr>
+          <th scope="row">16</th>
+          <td>print actprio</td>
+          <td>Muestra el estado de la prioridad de llenado de líneas en el sistema. Si el valor es 1, la prioridad está
+            activada, y el robot dará preferencia a la entrada más llena de producto, ignorando las demás. Si el valor
+            es 0, la prioridad está desactivada.</td>
+          <td></td>
+        </tr>
+        <!--Row 17 actprio = X-->
+        <tr>
+          <th scope="row">17</th>
+          <td>actprio = X</td>
+          <td>Permite activar o desactivar la prioridad del sistema.
+            <ul>
+              <li><i>'actprio=1'</i> activa la prioridad, priorizando las entradas más saturadas del sistema y dejando
+                de lado las demás.</li>
+              <li><i>'actprio=0'</i> desactiva la prioridad, permitiendo que el robot recoja de todas las entradas sin
+                preferencia.</li>
+            </ul>
+          </td>
+          <td>Este comando se utiliza cuando se desea priorizar la recogida de producto en una línea. Es
+            importante tener en cuenta que el sistema seleccionará esta línea a medida que se vayan llenando las
+            entradas. El robot no ignorará por completo las demás, sino que recogerá en la entrada priorizada hasta
+            completar su ciclo. Una vez finalizado, el robot volverá a recoger en las demás entradas. Si alguna otra
+            entrada se llena, el sistema priorizará automáticamente la nueva entrada llena.</td>
+        </tr>
+        <!--Row 18 linepriority-->
+        <tr>
+          <th scope="row">18</th>
+          <td>linepriority = X</td>
+          <td>Permite modificar la entrada que el robot prioriza. Por ejemplo, si se desea forzar al robot a recoger
+            únicamente de una entrada específica, se debe reemplazar "X" por el identificador de la entrada interna del
+            robot deseada. Esto obligará al robot a recoger exclusivamente de esa entrada. Es importante señalar que
+            para utilizar este comando, la prioridad del sistema debe estar activa.</td>
+          <td>Es importante tener en cuenta que, al forzar la recogida en una sola entrada, el robot ignorará las demás
+            entradas hasta que se desactive la prioridad del sistema.</td>
+        </tr>
+        <!--Row 19 actprio
+        <tr>
+          <th scope="row">19</th>
+          <td>print execline[X]</td>
+          <td>Visualiza el estado de la línea interna del robot 'x'. Reemplazar x por la línea interna a consultar. Si
+            El resultado es: 1 Linea Bloqueada y 0 Linea Desbloqueada</td>
+          <td>Este comando se aplica cuando el Estado de la Linea se encuentra en "Wait Robot Reset" y no cambia de
+            estado</td>
+        </tr>
+        -->
+      </tbody>
+    </table>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital de Documentación.</p>
+  </footer>
+</body>
+
+</html>
