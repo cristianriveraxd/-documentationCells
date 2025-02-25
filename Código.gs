@@ -7,8 +7,10 @@ function doGet(e) {
 
   if (qweb == "independizar") {
     title = "Modificar e independizar"
-  } else {
+  } else if (qweb == "index") {
     title = "Biblioteca Celdas Roboticas"
+  } else if (qweb = "comandos"){
+    title = "Comandos"
   }
 
 
